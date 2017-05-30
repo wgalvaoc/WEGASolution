@@ -1,0 +1,190 @@
+﻿/*IMPORT DAS FONTES*/
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+/*RESET UNIVERSAL*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/*IMAGENS E VIDEOS COM RESPONSIVIDADE
+img, video {
+    max-width: 100%;
+    height: auto;
+}*/
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    color: #211e1e;
+}
+
+h1, h2, h3 {
+    font-family: Orbitron, sans-serif;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #808080;
+}
+
+    nav a {
+        text-decoration: none;
+        color: #ded9d9;
+        font-weight: 900;
+        font-size: 1em;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+        nav ul li {
+            text-align: center;
+            width: 100%;
+        }
+
+            nav ul li a {
+                display: inline-block;
+                padding: 10px 0;
+                width: 100%;
+                text-decoration: none;
+                color: #ded9d9;
+            }
+
+header {
+    background-image: url('../Imagens/logoWega.png');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #211e1e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+    header p {
+        margin-bottom: 2em;
+    }
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px;
+    background-color: #ded9d9;
+}
+
+    #sobre p {
+        margin-bottom: 2.5em;
+        max-width: 1000px;
+    }
+
+#servicos {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #servicos div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+#portifolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+    #portifolio h2 {
+        margin-bottom: 20px;
+    }
+    #contato{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        padding:20px;
+    }
+    footer{
+        background-color:#808080;
+        text-align:center;
+        color:#ded9d9;
+        padding:10px;
+    }
+    @media screen and (min-width:760px)
+        {
+        nav{
+            flex-direction:row;
+            justify-content:space-around;
+        }
+        nav ul{
+            flex-direction:row;
+            width:70%;
+        }
+        header{
+            height:60vh;
+            justify-content:center;
+        }
+        #sobre{
+            height:30vh;
+            justify-content:center;
+            min-height:250px;
+        }
+        #servicos{
+            flex-direction:row;
+            flex-wrap:wrap;
+            align-items:flex-start;
+            max-width:1000px;
+            margin: 0 auto;
+        }
+        #servicos h2{
+            text-align:center;
+            width:100%;
+
+        }
+        #servicos div{
+            flex-grow:1;
+            flex-basis:150px;
+            padding: 0 10px;
+        }
+        #portifolio{
+            flex-direction:row;
+            flex-wrap:wrap;
+        }
+        #portifolio h2{
+            width:100%;
+            text-align:center;
+        }
+        #portifolio img{
+            width:33%;
+        }
+        #contato{
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content:space-around;
+            max-width:700px;
+            margin: 0 auto;
+        }
+        #contato h2, p{
+            width:100%;
+        }
+    }
+
