@@ -66,7 +66,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Layout.css" />
+    <Content Include="Content\Style.css" />
+    <Content Include="Imagens\AppFacebook.png" />
+    <Content Include="Imagens\AppG.png" />
+    <Content Include="Imagens\AppGitHub.png" />
+    <Content Include="Imagens\AppInstagram.png" />
+    <Content Include="Imagens\AppLinkedin.png" />
+    <Content Include="Imagens\AppSkype.png" />
+    <Content Include="Imagens\AppTwitter.png" />
+    <Content Include="Imagens\AppWhatsApp.png" />
+    <Content Include="Imagens\AppYouTube.png" />
+    <Content Include="Imagens\bannerLivros.png" />
     <Content Include="Imagens\logoWega.png" />
     <Content Include="packages.config" />
     <Content Include="Pages\Cadastro.aspx" />

@@ -1,0 +1,241 @@
+﻿/*IMPORT DAS FONTES*/
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,800,900|Orbitron:400,700,900');
+
+/*RESET DAS MARGINS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*FONTE PADRAO*/
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+/*CONFIGURACOES DO HEADER*/
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    background-color: #ccc8c8;
+    background-image: linear-gradient(to right, white, #ff6a00);
+}
+
+/*CONFIGURACOES DA LOGO*/
+#TextoLogo {
+    font-family: Orbitron, sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    text-decoration: none;
+    text-shadow: 0 0 20px #fff, 0 -10px 20px #fff, 0 10px 20px #fff, -20px 0 40px #fff, 20px 0 40px #fff;
+}
+
+/*CONFIGURACOES DO TEXTO SISTEMA*/
+#TextoHeader {
+    font-family: 'Exo 2', sans-serif;
+    color: #808080;
+    font-size: 1em;
+}
+
+/*CONFIGURACOES DO SUPORTE*/
+#TextoContato {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    padding-top: 0;
+}
+
+/*CONFIGURACOES DA LINHA TODO E FINAL DA IMAGEM*/
+.DivLinhaTopo {
+    background-color: #FF34B3;
+    height: 2px;
+}
+
+/*CONFIGURACOES DA NAV MENU*/
+#NavMenu {
+    background-color: rgba(62,188,207,0.96);
+}
+
+    /*CSS DA UL*/
+    #NavMenu > ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        list-style: none;
+    }
+
+    #NavMenu ul li {
+        flex: 0 1 auto;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        transition: all linear 0.5s;
+        font-family: 'Exo 2', sans-serif;
+    }
+        /*EFEITO DE COR DO MENU*/
+        #NavMenu ul li:hover {
+            background: #FF34B3;
+        }
+
+    #NavMenu > ul > li a + div {
+        background: linear-gradient(to bottom,rgba(58,162,173,1) 0,rgba(62,188,207,0.96) 100%);
+        border-radius: 0 0 2px 2px;
+        box-shadow: 0 3px 1px rgba(0,0,0,.05);
+        display: none;
+        font-size: 1rem;
+        position: absolute;
+        width: 166px;
+    }
+
+    #NavMenu > ul > li:hover a + div {
+        display: block;
+    }
+
+    #NavMenu > ul > li a + div > ul {
+        list-style-type: none;
+    }
+
+        #NavMenu > ul > li a + div > ul > li {
+            margin: 0;
+            padding: 0;
+        }
+
+            #NavMenu > ul > li a + div > ul > li > a {
+                color: rgba(255,255,255,.9);
+                display: block;
+                font-size: .75rem;
+                letter-spacing: 1.5px;
+                padding: .25rem 1.5rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            #NavMenu > ul > li a + div > ul > li:hover > a {
+                background-color: rgba(0,0,0,.15);
+            }
+    /*CSS CONFIGURACAO DO LINK*/
+    #NavMenu > ul > li > a {
+        color: #fff;
+        display: flex;
+        font-size: 1.0rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+        max-width: 130px;
+        padding: 1rem 2.5rem;
+        text-decoration: none;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+        transition: all linear 0.1s;
+    }
+
+@media screen and (min-width: 720px) {
+    /*MEDIA CONFIGURAR MENU*/
+    #NavMenu > ul > li > a {
+        max-width: 500px;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+        #NavMenu > ul > li > a > div {
+            margin: 4px 0 0;
+        }
+
+    #TextoLogo {
+        font-size: 5em;
+    }
+    /*ALINHAR TAMANHO DA DIV APOS REDIMENSIONAR*/
+    #NavMenu > ul > li a + div {
+        width: 182px;
+    }
+}
+
+#SectionBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: rgba(62,188,207,0.96);
+}
+
+    #SectionBanner h3 {
+        color: #FF34B3;
+        padding: 20px 0 15px 0;
+        font-weight: 700;
+    }
+
+    #SectionBanner img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.SectionContato {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #ccc8c8;
+    align-items: center;
+}
+
+    .SectionContato p {
+        font-size: 0.8em;
+        color: #808080;
+    }
+
+#SectionContato h3 {
+    color: #FF34B3;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.DivTextoSobreNos {
+    padding-bottom: 20px;
+}
+
+#DivSocial {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgRedesSociais {
+    max-width: 100%;
+    padding: 0 10px;
+}
+/*ANIMACAO REDES SOCIAIS*/
+.ImgRedesSociais {
+    opacity: 0.4;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+}
+/*ANIMACAO REDES SOCIAIS*/
+.ImgRedesSociais:hover {
+    opacity: 5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)";
+}
+
+footer {
+    position:absolute;
+    width:100%;
+    background-color: #808080;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 50px;
+}
+
+    footer p {
+        font-size: 0.8em;
+        color: #ffffff;
+    }
