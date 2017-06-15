@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using System.Data.SqlClient; //Biblioteca de acesso a SQL
 using System.Data;
 
 namespace DAL.Persistence
@@ -21,7 +21,7 @@ namespace DAL.Persistence
             try
             {
                 //Caminho da conexao
-                Con = new SqlConnection(@"Data Source = WGALVAO\SQLEXPRESS; Initial Catalog = Libra; Integrated Security = True:");
+                Con = new SqlConnection(@"Server=WGALVAO\SQLEXPRESS;Initial Catalog=Libra; Integrated Security=True");
 
                 if (Con.State == ConnectionState.Closed)
                 {

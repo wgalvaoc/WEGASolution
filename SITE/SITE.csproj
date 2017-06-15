@@ -79,7 +79,9 @@
     <Content Include="Imagens\bannerLivros.png" />
     <Content Include="Imagens\logoWega.png" />
     <Content Include="packages.config" />
-    <Content Include="Pages\Cadastro.aspx" />
+    <Content Include="Pages\CadastroFabricante.aspx" />
+    <Content Include="Pages\ConsultaFabricante.aspx" />
+    <Content Include="Pages\PesquisarFabricante.aspx" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -118,12 +120,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Cadastro.aspx.cs">
-      <DependentUpon>Cadastro.aspx</DependentUpon>
+    <Compile Include="Pages\CadastroFabricante.aspx.cs">
+      <DependentUpon>CadastroFabricante.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Cadastro.aspx.designer.cs">
-      <DependentUpon>Cadastro.aspx</DependentUpon>
+    <Compile Include="Pages\CadastroFabricante.aspx.designer.cs">
+      <DependentUpon>CadastroFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ConsultaFabricante.aspx.cs">
+      <DependentUpon>ConsultaFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ConsultaFabricante.aspx.designer.cs">
+      <DependentUpon>ConsultaFabricante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PesquisarFabricante.aspx.cs">
+      <DependentUpon>PesquisarFabricante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PesquisarFabricante.aspx.designer.cs">
+      <DependentUpon>PesquisarFabricante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

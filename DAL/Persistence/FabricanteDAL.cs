@@ -84,6 +84,7 @@ namespace DAL.Persistence
                 AbriConexao();
                 Cmd = new SqlCommand("SELECT * FROM TbFabricante WHERE IdFabricante=@Id", Con);
                 Cmd.Parameters.AddWithValue("@Id", Id);
+                Dr = Cmd.ExecuteReader();//executa a leitura das informacoes na base
 
                 GetSetFabricante fabricante = null;//Espaço vazio na memoria
 
@@ -118,7 +119,7 @@ namespace DAL.Persistence
 
                 while (Dr.Read())
                 {
-                    GetSetFabricante lista = new GetSetFabricante();
+                    GetSetFabricante lista = new GetSetFabricante();//Objeto "lista"
 
                     lista.IdFabricante = Convert.ToInt32(Dr["IdFabricante"]);
                     lista.NomeFabricante = Convert.ToString(Dr["NomeFabricante"]);

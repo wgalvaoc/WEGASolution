@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SITE.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroFabricante.aspx.cs" Inherits="SITE.Pages.Cadastro" %>
 
 <!DOCTYPE html>
 
@@ -8,10 +8,10 @@
     <!--Responsividade-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 
-    <title>Controle e Gestão de Patrimônio</title>
+    <title>Cadastro de Fabricante</title>
 
-    <!--<link type="text/css" rel="stylesheet" href="../Content/bootstrap.css" />-->
-    <link type="text/css" rel="stylesheet" href="Content/Style.css" />
+    <link type="text/css" rel="stylesheet" href="../Content/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../Content/Style.css" />
     <!--Icones e simbolos-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="description" content="Sistema de Gestão de Patrimônio, desenvolvido por WEGA Solution" />
@@ -23,7 +23,6 @@
 <script src="Scripts/bootstrap.min.js"></script>
 <body>
     <form id="form1" runat="server">
-
         <header>
             <a id="TextoLogo" href="../Default.aspx"><span style="color: #FF34B3;">.libr</span><span style="color: #00BFFF;">a.</span></a>
             <p id="TextoHeader">Sistema de Gestão e Controle de Patrimônio</p>
@@ -50,7 +49,7 @@
         <nav id="NavMenu">
             <ul>
                 <li>
-                    <a href="Default.aspx">
+                    <a href="../Default.aspx">
                         <div>
                             HOME
                         </div>
@@ -64,8 +63,8 @@
                     </a>
                     <div>
                         <ul>
-                            <li><a href="Pages/CadastroFabricante.aspx">FABRICANTE</a></li>
-                            <li><a href="Pages/PesquisarFabricante.aspx">TESTE FABRICANTE</a></li>
+                            <li><a href="../Pages/CadastroFabricante.aspx">FABRICANTE</a></li>
+                            <li><a href="#">MODELO</a></li>
                             <li><a href="#">EQUIPAMENTO</a></li>
                             <li><a href="#">USUÁRIO</a></li>
                             <li><a href="#">CARGO</a></li>
@@ -80,7 +79,7 @@
                     </a>
                     <div>
                         <ul>
-                            <li><a href="Pages/ConsultaFabricante.aspx">FABRICANTE</a></li>
+                            <li><a href="../Pages/ConsultaFabricante.aspx">FABRICANTE</a></li>
                             <li><a href="#">EQUIPAMENTO</a></li>
                             <li><a href="#">MODELO</a></li>
                         </ul>
@@ -98,17 +97,38 @@
 
         <section id="SectionBanner">
             <div>
-                <h3>ORGANIZAÇÃO E CONTROLE :)</h3>
-            </div>
-            <div>
-                <p>
-                    O libra Software foi desenvolvido pela WEGA Solution para atender a demanda do mercado, 
-                o Libra tem a capacidade de manter e organizar os equipamentos de TI visando o controle total de patrimônio.
-                </p>
+                <h3>CADASTRO DE FABRICANTE</h3>
             </div>
 
-            <img src="Imagens/bannerLivros.png" alt="Imagem Livros" />
 
+            <div id="DivCadastro">
+
+                <div id="DivCadastroFabricante">
+                    <br />
+                    NOME FABRICANTE:
+            <br />
+                    <br />
+                    <asp:TextBox runat="server" ID="txtNomeFabricante" placeholder="Nome do Fabricante"
+                        CssClass="form-control" Width="100%">
+                    </asp:TextBox>
+
+                    <asp:RequiredFieldValidator runat="server" ID="requeredNomeFabricante" ControlToValidate="txtNomeFabricante"
+                        ErrorMessage="Favor preencher o campo Nome Fabricante"
+                        ForeColor="#ff6600">
+                    </asp:RequiredFieldValidator>
+
+                    <br />
+                    <asp:Label runat="server" ID="lblMensagem">
+                    </asp:Label>
+                    <br />
+                    <br />
+                    <asp:Button runat="server" ID="btnCadastrar" Text="Cadastrar" CssClass="btn btn-info" OnClick="btnCadastrarFabricante" />
+
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
         </section>
 
         <div class="DivLinhaTopo">
@@ -133,34 +153,34 @@
             </div>
             <div id="DivSocial">
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppFacebook.png" alt="Facebook" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppFacebook.png" alt="Facebook" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppG.png" alt="Google +" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppG.png" alt="Google +" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppInstagram.png" alt="Instagram" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppInstagram.png" alt="Instagram" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppLinkedin.png" alt="Linkedin" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppLinkedin.png" alt="Linkedin" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppYoutube.png" alt="Youtube" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppYoutube.png" alt="Youtube" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppTwitter.png" alt="Twitter" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppTwitter.png" alt="Twitter" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppGithub.png" alt="GitHub" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppGithub.png" alt="GitHub" />
                 </div>
                 <div>
                     <a href="mailto:wgalvao@msn.com">
-                        <img class="ImgRedesSociais" src="Imagens/AppEmail.png" alt="Email" />
+                        <img class="ImgRedesSociais" src="../Imagens/AppEmail.png" alt="Email" />
                     </a>
                 </div>
                 <div>
                     <a href="tel:xx73999815292">
-                        <img class="ImgRedesSociais" src="Imagens/AppWhatsApp.png" alt="WhatsApp" />
+                        <img class="ImgRedesSociais" src="../Imagens/AppWhatsApp.png" alt="WhatsApp" />
                     </a>
                 </div>
             </div>
@@ -169,7 +189,7 @@
         <footer>
             <p id="textoRodape">© Todos Direitos Reservados 2017 | WEGA Interactive Solution</p>
             <a href="wwww.wegasolution.com.br">
-                <img src="Imagens/logoWega.png" alt="Logo WEGA Solution" style="width: 130px;" /></a>
+                <img src="../Imagens/logoWega.png" alt="Logo WEGA Solution" style="width: 130px;" /></a>
         </footer>
     </form>
 </body>

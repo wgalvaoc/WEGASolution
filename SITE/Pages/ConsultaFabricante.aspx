@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SITE.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ConsultaFabricante.aspx.cs" Inherits="SITE.Pages.ConsultaFabricante" %>
 
 <!DOCTYPE html>
 
@@ -8,10 +8,10 @@
     <!--Responsividade-->
     <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 
-    <title>Controle e Gestão de Patrimônio</title>
+    <title>Consulta de Fabricante</title>
 
-    <!--<link type="text/css" rel="stylesheet" href="../Content/bootstrap.css" />-->
-    <link type="text/css" rel="stylesheet" href="Content/Style.css" />
+    <link type="text/css" rel="stylesheet" href="../Content/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../Content/Style.css" />
     <!--Icones e simbolos-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="description" content="Sistema de Gestão de Patrimônio, desenvolvido por WEGA Solution" />
@@ -50,7 +50,7 @@
         <nav id="NavMenu">
             <ul>
                 <li>
-                    <a href="Default.aspx">
+                    <a href="../Default.aspx">
                         <div>
                             HOME
                         </div>
@@ -64,8 +64,8 @@
                     </a>
                     <div>
                         <ul>
-                            <li><a href="Pages/CadastroFabricante.aspx">FABRICANTE</a></li>
-                            <li><a href="Pages/PesquisarFabricante.aspx">TESTE FABRICANTE</a></li>
+                            <li><a href="../Pages/CadastroFabricante.aspx">FABRICANTE</a></li>
+                            <li><a href="#">MODELO</a></li>
                             <li><a href="#">EQUIPAMENTO</a></li>
                             <li><a href="#">USUÁRIO</a></li>
                             <li><a href="#">CARGO</a></li>
@@ -80,7 +80,7 @@
                     </a>
                     <div>
                         <ul>
-                            <li><a href="Pages/ConsultaFabricante.aspx">FABRICANTE</a></li>
+                            <li><a href="../Pages/ConsultaFabricante.aspx">FABRICANTE</a></li>
                             <li><a href="#">EQUIPAMENTO</a></li>
                             <li><a href="#">MODELO</a></li>
                         </ul>
@@ -98,18 +98,26 @@
 
         <section id="SectionBanner">
             <div>
-                <h3>ORGANIZAÇÃO E CONTROLE :)</h3>
+                <h3>CONSULTA FABRICANTE</h3>
             </div>
-            <div>
-                <p>
-                    O libra Software foi desenvolvido pela WEGA Solution para atender a demanda do mercado, 
-                o Libra tem a capacidade de manter e organizar os equipamentos de TI visando o controle total de patrimônio.
-                </p>
-            </div>
-
-            <img src="Imagens/bannerLivros.png" alt="Imagem Livros" />
-
         </section>
+
+        <div id="DivCadastro">
+            <div id="DivCadastroFabricante" class="DivConsultaFabricante">
+                <asp:GridView runat="server" ID="gridFabricante" GridLines="None" AutoGenerateColumns="false"
+                    OnPageIndexChanging="gridFabricante_PageIndexChanging" PageSize="2" AllowPaging="True"
+                    PagerSettings-Mode="NextPrevious"
+                    CssClass="table table-hover table-striped" BackColor="#ccc8c8">
+                    <Columns>
+                        <asp:BoundField DataField="IdFabricante" HeaderText="Código" />
+                        <asp:BoundField DataField="NomeFabricante" HeaderText="Nome" />
+                    </Columns>
+                </asp:GridView>
+                <asp:Label runat="server" ID="lblMensagem">
+                </asp:Label>
+            </div>
+        </div>
+
 
         <div class="DivLinhaTopo">
         </div>
@@ -131,36 +139,37 @@
                 <p>AVALIAÇÃO DE ATIVO</p>
                 <p>INVENTÁRIO DE ESTOQUE</p>
             </div>
+
             <div id="DivSocial">
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppFacebook.png" alt="Facebook" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppFacebook.png" alt="Facebook" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppG.png" alt="Google +" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppG.png" alt="Google +" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppInstagram.png" alt="Instagram" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppInstagram.png" alt="Instagram" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppLinkedin.png" alt="Linkedin" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppLinkedin.png" alt="Linkedin" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppYoutube.png" alt="Youtube" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppYoutube.png" alt="Youtube" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppTwitter.png" alt="Twitter" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppTwitter.png" alt="Twitter" />
                 </div>
                 <div>
-                    <img class="ImgRedesSociais" src="Imagens/AppGithub.png" alt="GitHub" />
+                    <img class="ImgRedesSociais" src="../Imagens/AppGithub.png" alt="GitHub" />
                 </div>
                 <div>
                     <a href="mailto:wgalvao@msn.com">
-                        <img class="ImgRedesSociais" src="Imagens/AppEmail.png" alt="Email" />
+                        <img class="ImgRedesSociais" src="../Imagens/AppEmail.png" alt="Email" />
                     </a>
                 </div>
                 <div>
                     <a href="tel:xx73999815292">
-                        <img class="ImgRedesSociais" src="Imagens/AppWhatsApp.png" alt="WhatsApp" />
+                        <img class="ImgRedesSociais" src="../Imagens/AppWhatsApp.png" alt="WhatsApp" />
                     </a>
                 </div>
             </div>
@@ -169,8 +178,9 @@
         <footer>
             <p id="textoRodape">© Todos Direitos Reservados 2017 | WEGA Interactive Solution</p>
             <a href="wwww.wegasolution.com.br">
-                <img src="Imagens/logoWega.png" alt="Logo WEGA Solution" style="width: 130px;" /></a>
+                <img src="../Imagens/logoWega.png" alt="Logo WEGA Solution" style="width: 130px;" /></a>
         </footer>
+
     </form>
 </body>
 </html>
